@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>Detail User Game</h1>
+    <a href="/create-user">Add/Edit User Game</a>
+    <br>
+    <table class="table-auto">
+        <tr>
+            <th>ID</th>
+            <td><%= user.id %> </td>
+        </tr>
+        <tr>
+            <th>Username</t>
+            <td><%= user.username %> </td>
+        </tr>
+        <tr>
+            <th>DOB</th>
+            <td><%= biodata.dob %> </td>
+        </tr>
+        <tr>
+            <th>POB</th>
+            <td><%= biodata.pob %> </td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td><%= biodata.city %> </td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td><%= biodata.gender %> </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Time</th>
+            <th>Score</th>
+        </tr>
+        <% histories.forEach(history => { %>
+            <tr>
+                <td><%= history.id %> </td>
+                <td><%= history.playing_time %> </td>
+                <td><%= history.result %> </td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

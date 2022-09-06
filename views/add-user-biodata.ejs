@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+</head>
+<body>
+<h1>Add User Biodata</h1>
+<form action="/add-biodata/<%= user.id %>" method="post">
+    <div>
+        <label for="">Username</label>
+        <input type="text" name="username" value="<%= user.username %>">
+        <input type="hidden" name="UserGameId" value="<%=user.id%>">
+    </div>
+    <div>
+        <label for="">Password</label>
+        <input type="password" name="password" value="<%= user.password %>">
+    </div>
+    <div>
+        <label for="">DOB</label>
+        <input type="date" name="dob">
+    </div>
+    <div>
+        <label for="">POB</label>
+        <input type="text" name="pob">
+    </div>
+    <div>
+        <label for="">City</label>
+        <input type="text" name="city">
+    </div>
+    <div>
+        <label for="">Gender</label>
+        <div class="form-gender">
+            <input class="form-gender-input" type="radio" name="gender" id="RadioMale" value="Male" />
+            <label class="form-gender-label" for="RadioMale"> Male </label>
+        </div>
+        <div class="form-check">
+            <input class="form-gender-input" type="radio" name="gender" id="RadioFemale" value="fEMALE" />
+            <label class="form-gender-label" for="exampleRadios2"> Female </label>
+        </div>
+    </div>
+    <button type="submit" class="">Save</button>
+    <button type="reset" class="">Reset</button>
+</form>
+</body>
+</html>

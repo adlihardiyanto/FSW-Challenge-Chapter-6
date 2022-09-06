@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Users</title>
+</head>
+<body>
+<h1>Dashboard Users Game</h1>
+<a href="/create-user">Create New User</a>
+<!-- <br>
+<form action="">
+    <input type="text" name="search_user" placeholder="Enter username here">
+    <button type="submit" class="">Search</button>
+</form> -->
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(function(user) { %>
+        <tr>
+            <td><%= user.id %></td>
+            <td><%= user.username %></td>
+            <td>
+                <a href="/edit-user/<%= user.id %>" onclick="return confirm('Are you sure?')">Edit</a>
+                <a href="/delete/<%= user.id %>" onclick="return confirm('Are you sure?')">Delete</a>
+                <a href="/details/<%=user.id%>">Details</a>
+                <a href="/add-biodata/<%=user.id%>">Add Bio</a>
+            </td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+</body>
+</html>

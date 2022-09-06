@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+</head>
+<body>
+<h1>Edit User Game</h1>
+<form action="/update/<%= user.id %>" method="post">
+    <div>
+        <label for="">Username</label>
+        <input type="text" name="username" value="<%= user.username %>">
+    </div>
+    <div>
+        <label for="">Password</label>
+        <input type="password" name="password" value="<%= user.password %>">
+    </div>
+    <!-- <div>
+        <label for="">DOB</label>
+        <input type="password" name="password" value="<%= %>">
+    </div>
+    <div>
+        <label for="">POB</label>
+        <input type="password" name="password" value="<%= %>">
+    </div>
+    <div>
+        <label for="">City</label>
+        <input type="password" name="password" value="<%= %>">
+    </div>
+    <div>
+        <label for="">Gender</label>
+        <div>
+            <input class="form-gender-input" type="radio" name="gender" id="RadioMale" value="male" />
+            <label class="form-gender-label" for="RadioMale"> Male </label>
+        </div>
+        <div>
+            <input class="form-gender-input" type="radio" name="gender" id="RadioFemale" value="female" />
+            <label class="form-gender-label" for="RadioFemale"> Female </label>
+        </div>
+    </div> -->
+    <button type="submit" class="">Save</button>
+    <button type="reset" class="">Reset</button>
+</form>
+</body>
+</html>
