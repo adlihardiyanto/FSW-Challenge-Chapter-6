@@ -1,0 +1,47 @@
+body{
+    font-family: 'Inter';
+    font-style: normal;
+    background: brown;
+}
+
+
+form {
+    padding: 40px 50px;
+    background: yellow;
+    width: 348px;
+    height: 368px;
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 50%;
+    transform:  translateY(-50%);
+    border-radius: 10px
+}
+
+form .title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: black;
+}
+
+form label {
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.form-group {
+    margin-bottom: 20px
+}
+
+form input, form button{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #9c835f;
+  font-family: "Open Sans", sans-serif;
+}
+
+#container {
+  height: 100%;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  height: 11vh;
+  margin-bottom: 30px;
+}
+
+.check {
+  border-style: solid;
+  border-color: red;
+}
+
+.logo-game {
+  margin: 15px 20px 5px 10px;
+  height: 6vh;
+  width: 6vh;
+}
+
+#heading {
+  color: #f9b23d;
+  font-weight: 700;
+  font-size: 2.6vw;
+  margin-left: 10px;
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: 17vw 20vw 17vw;
+  grid-template-rows: 7vh 4vh 22vh 22vh 22vh 10vh;
+  grid-template-areas:
+    "player . computer"
+    "playerScore . comScore"
+    "rock1 . rock2"
+    "paper1 versus paper2"
+    "scissor1 . scissor2"
+    ". refresh .";
+  gap: 10px;
+  row-gap: 10px;
+  height: 70vh;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: #c4c4c4;
+  padding: 10px 30px 10px 30px;
+  border-radius: 1em;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-selected {
+  background-color: #c4c4c4;
+  padding: 10px 30px 10px 30px;
+  border-radius: 1em;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-result {
+  color: #fff;
+  width: 11vw;
+  height: 9vw;
+  grid-area: versus;
+  font-size: 3.3vw;
+  background-color: #4c9654;
+  padding: 10px 30px 10px 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  transform: rotate(-20deg);
+}
+
+.versus {
+  color: #bd0000;
+  grid-area: versus;
+  font-size: 3.3vw;
+}
+
+.not-allowed {
+  cursor: not-allowed !important;
+}
+
+.image {
+  cursor: pointer;
+  width: 100px;
+  height: 119px;
+}
+
+#player {
+  grid-area: player;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  font-size: 2.4vw;
+}
+
+#computer {
+  grid-area: computer;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  font-size: 2.4vw;
+}
+
+#playerScore {
+  grid-area: playerScore;
+  color: #066910;
+  font-weight: 700;
+  margin-top: -15px;
+  font-size: 2vw;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-5;
+  animation-timing-function: ease;
+}
+
+#comScore {
+  grid-area: comScore;
+  color: #066910;
+  margin-top: -15px;
+  font-weight: 700;
+  font-size: 2vw;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-5;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-5 {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-5px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-2px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+.rock-grid1 {
+  grid-area: rock1;
+}
+
+.rock-grid2 {
+  grid-area: rock2;
+}
+
+.paper-grid1 {
+  grid-area: paper1;
+}
+
+.paper-grid2 {
+  grid-area: paper2;
+}
+
+.scissor-grid1 {
+  grid-area: scissor1;
+}
+
+.scissor-grid2 {
+  grid-area: scissor2;
+}
+
+.refresh {
+  grid-area: refresh;
+  margin-bottom: 110px;
+  width: 55px;
+  height: 51px;
+}
+
+.image-refresh {
+  width: 55px;
+  height: 51px;
+}

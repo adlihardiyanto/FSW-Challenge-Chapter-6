@@ -31,7 +31,10 @@
                 <a href="/edit-user/<%= user.id %>" onclick="return confirm('Are you sure?')">Edit</a>
                 <a href="/delete/<%= user.id %>" onclick="return confirm('Are you sure?')">Delete</a>
                 <a href="/details/<%=user.id%>">Details</a>
-                <a href="/add-biodata/<%=user.id%>">Add Bio</a>
+                <% if (user.UserGameBio == null) { %>
+                    <a href="/add-biodata/<%=user.id%>">Add Bio</a>
+                <% } %> 
+                
             </td>
         </tr>
         <% }); %>

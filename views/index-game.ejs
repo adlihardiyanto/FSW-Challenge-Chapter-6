@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4 Challenge - Adli Rahadyan</title>
+    <link rel="stylesheet" href="/css/style-game.css">
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navbar">
+                <img class="logo-game" src="./assets/logo-game.png" alt="logo"></a>
+                <h1 id="heading">ROCK PAPER SCISSORS</h1>
+        </nav>
+
+        <div id="game-container">
+            <h1 id="player">PLAYER 1</h1><h1 id="playerScore">0</h1>
+            <h1 id="computer">COMPUTER</h1><h1 id="comScore">0</h1>
+
+            <div class="rock-grid1 box" id="rock-user">
+                <img class="image" src="./assets/rock.png" alt="back to prev" onclick="play.checkPilihan('rock');">
+            </div>
+            <div class="rock-grid2" id="rock-com">
+                <img class="image not-allowed" src="./assets/rock.png" alt="back to prev" >
+            </div>
+            <div class="paper-grid1 box" id="paper-user">
+                <img class="image" src="./assets/paper.png" alt="back to prev" onclick="play.checkPilihan('paper');">
+            </div>
+            <div class="paper-grid2" id="paper-com">
+                <img class="image not-allowed" src="./assets/paper.png" alt="back to prev">
+            </div>
+            <div class="scissor-grid1 box" id="scissor-user">
+                <img class="image" src="./assets/scissor.png" alt="back to prev" onclick="play.checkPilihan('scissor');">
+            </div>
+            <div class="scissor-grid2" id="scissor-com">
+                <img class="image not-allowed" src="./assets/scissor.png" alt="back to prev">
+            </div>
+            
+            <div id="result" class="versus">
+                <h1>VS</h1>
+            </div>
+
+            <div class="refresh" ><a href="#">
+                <a href="/index-game"><img class="image-refresh" src="./assets/refresh.png" alt="back to prev"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script-game.js"></script>
+</body>
+</html>
